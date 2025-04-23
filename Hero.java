@@ -8,11 +8,11 @@ public class Hero extends Actor
     public void act()
     {
         
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("up")||(Greenfoot.isKeyDown("w")))
         {
             setLocation(100,100);
         }
-        else if (Greenfoot.isKeyDown("right"))
+        else if (Greenfoot.isKeyDown("down")||(Greenfoot.isKeyDown("s")))
         {
             setLocation(100,300);
         }
