@@ -5,19 +5,14 @@ public class Hero extends Actor
     {
         setImage("images/ppl1.png");
     }
-    boolean atTop = true;
     public void act()
     {
-        if(Greenfoot.mouseClicked(null))
-        {
-            atTop = !atTop;
-        }
         
-        if(atTop)
+        if(Greenfoot.isKeyDown("left"))
         {
             setLocation(100,100);
         }
-        else
+        else if (Greenfoot.isKeyDown("right"))
         {
             setLocation(100,300);
         }
