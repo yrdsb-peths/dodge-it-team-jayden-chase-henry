@@ -13,7 +13,6 @@ public class Hero extends Actor
         {
             cooldown --;
         }
-        
         if(Greenfoot.isKeyDown("up")||(Greenfoot.isKeyDown("w")))
         {
             if (cooldown == 0&&position > 1)
