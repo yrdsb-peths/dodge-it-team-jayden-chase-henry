@@ -2,6 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Banana extends Actor
 {
+    public Banana()
+    {
+        setImage("images/bananas.png");
+    }
     public void act()
     {
         move(-10);
@@ -11,7 +15,7 @@ public class Banana extends Actor
             resetBanana();
         }
         
-        if(isTouching(Banana.class))
+        if(isTouching(Hero.class))
         {
             Skull skull = new Skull();
             getWorld().addObject(skull, 300, 200);
