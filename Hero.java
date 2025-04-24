@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hero extends Actor
 {
-    int cooldown = 0;
-    int position = 1;
+    int cooldown = 0;//prevents (mostly) repeated commands
+    int position = 1;//prevents leaving the 3 paths
     public Hero()
     {
         setImage("images/ppl1.png");
