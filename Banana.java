@@ -20,7 +20,14 @@ public class Banana extends Actor
         {
             resetBanana();
         }
-        
+        if(Greenfoot.isKeyDown("d")||(Greenfoot.isKeyDown("right")))
+        {
+            score+=250;
+        }
+        if(Greenfoot.isKeyDown("a")||(Greenfoot.isKeyDown("left")))
+        {
+            score-=250;
+        }
         if(Greenfoot.isKeyDown("space"))
         {
             resetGame();
@@ -30,7 +37,7 @@ public class Banana extends Actor
         {
             Skull skull = new Skull();
             getWorld().addObject(skull, 300, 200);
-            getWorld().removeObject(this);
+            
             score  = 0;
             isAlive = false;
         }

@@ -12,8 +12,12 @@ public class Skull extends Actor
     {
         setImage("images/skull.png");
     }
+    
     public void act()
     {
-        // Add your action code here.
+        if(Greenfoot.isKeyDown("space"))
+        {
+            getWorld().removeObject(this);
+        }
     }
 }
