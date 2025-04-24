@@ -5,9 +5,9 @@ public class MyWorld extends World {
         super(600, 400, 1);
         
         Banana banana = new Banana();
-        addObject(banana, 600, 100);
+        addObject(banana, 600, 200);
         Banana bananaTwo = new Banana();
-        addObject(bananaTwo, 600, 100);
+        addObject(bananaTwo, 600, 200);
         
         Hero hero = new Hero();
         addObject(hero, 100, 100);

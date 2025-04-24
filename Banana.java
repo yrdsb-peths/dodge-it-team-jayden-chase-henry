@@ -3,13 +3,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Banana extends Actor
 {
     int score = 500;
+    boolean isAlive = true;
     public Banana()
     {
         setImage("images/bananas.png");
     }
     public void act()
     {
-        score++;
+        if (isAlive)
+        {
+           score++; 
+        }
         move(-score/500);
         
         if(getX() <= 0)
@@ -17,14 +21,26 @@ public class Banana extends Actor
             resetBanana();
         }
         
-        if(isTouching(Hero.class))
+        if(Greenfoot.isKeyDown("space"))
+        {
+            resetGame();
+        }
+        
+        if(isTouching(Hero.class))//death code
         {
             Skull skull = new Skull();
             getWorld().addObject(skull, 300, 200);
             getWorld().removeObject(this);
+            score  = 0;
+            isAlive = false;
         }
     }
-    
+    public void resetGame()
+    {
+        score = 500;
+        isAlive = true;
+        resetBanana();
+    }
     public void resetBanana()
     {
         int num = Greenfoot.getRandomNumber(3);
