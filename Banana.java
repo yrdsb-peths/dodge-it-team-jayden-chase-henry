@@ -2,13 +2,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Banana extends Actor
 {
+    int score = 100;
     public Banana()
     {
         setImage("images/bananas.png");
     }
     public void act()
     {
-        move(-10);
+        score++;
+        move(-score/100);
         
         if(getX() <= 0)
         {

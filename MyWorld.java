@@ -9,5 +9,6 @@ public class MyWorld extends World {
         
         Hero hero = new Hero();
         addObject(hero, 100, 100);
+        setBackground(new GreenfootImage("images/testbackground.png"));
     }
 }
