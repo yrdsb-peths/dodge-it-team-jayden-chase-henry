@@ -22,7 +22,7 @@ public class Hero extends Actor
         else if (Greenfoot.isKeyDown("down")||(Greenfoot.isKeyDown("s")))
         {
             cooldown = 1;
-            if(position < 3 && cooldown != cooldownOld && cooldown == 1)
+            if(position < 3 && cooldown != cooldownOld)
             {
                     setLocation(getX(), getY()+100);
                     position++;
