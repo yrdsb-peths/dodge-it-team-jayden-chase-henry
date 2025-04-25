@@ -6,7 +6,7 @@ public class Banana extends Actor
     boolean isAlive = true;
     public Banana()
     {
-        setImage("images/bananas.png");
+        setImage("images/banana.png");
     }
     public void act()
     {
